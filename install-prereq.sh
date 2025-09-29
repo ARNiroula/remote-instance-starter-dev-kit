@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Installing Tmux (For Terminal Multiplexer)
+# Essentials (adds things like gcc)
 sudo apt update
+sudo apt install build-essential
+
+# Installing Tmux (For Terminal Multiplexer)
 sudo apt install tmux
 
 # Installing lazygit (For Ubuntu 25.04 and older)
