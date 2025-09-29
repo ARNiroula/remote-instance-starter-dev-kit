@@ -3,6 +3,7 @@
 # Essentials (adds things like gcc)
 sudo apt update
 sudo apt install build-essential
+sudo apt-get install luarocks
 
 # Installing Tmux (For Terminal Multiplexer)
 sudo apt install tmux
@@ -25,10 +26,13 @@ sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
 
 echo 'export PATH="$PATH:/opt/nvim/"' >>~/.bashrc
 
-# Installing fzf, fd, rg
+# Install Fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+# Installing fd, rg
 sudo apt install fd-find
 sudo apt-get install ripgrep
-sudo apt install fzf
 
 # Install lazyvim
 git clone https://github.com/ARNiroula/neovim-config-v2.git ~/.config/nvim
