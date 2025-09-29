@@ -8,7 +8,12 @@ sudo apt install tmux
 sudo apt install lazygit
 
 # Installing Neovim
-sudo apt install neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+sudo chmod u+x nvim-linux-x86_64.appimage
+sudo mkdir -p /opt/nvim
+sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
+
+echo 'export PATH="$PATH:/opt/nvim/"' >>~/.bashrc
 
 # Installing fzf, fd, rg
 sudo apt install fd-find
