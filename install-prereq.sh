@@ -28,6 +28,6 @@ sudo apt-get install ripgrep
 sudo apt install fzf
 
 # Install lazyvim
-git clone https://github.com/ARNiroula/neovim_config-v2 ~/.config/nvim
+git clone https://github.com/ARNiroula/neovim-config-v2.git ~/.config/nvim
 
 source ~/.bashrc
