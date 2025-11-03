@@ -5,6 +5,9 @@ sudo apt update
 sudo apt install build-essential
 sudo apt-get install luarocks
 
+# Install rust
+curl https://sh.rustup.rs -sSf | sh
+
 # Installing Tmux (For Terminal Multiplexer)
 sudo apt install tmux
 
