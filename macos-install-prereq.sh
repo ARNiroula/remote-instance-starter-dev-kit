@@ -11,6 +11,18 @@ brew install bash wget gcc luarocks tmux ripgrep fzf fd lazygit docker neovim
 # Install go, node, npm, python3
 brew install go node python
 
+#TODO: Update Neovim Config to be free of Lazyvim
+# Install Lua 5.1 (For Lazyvim)
+wget https://www.lua.org/ftp/lua-5.1.5.tar.gz
+tar xzf lua-5.1.5.tar.gz
+cd lua-5.1.5 || exit
+make macosx
+mkdir ~/opt
+make INSTALL_TOP=$HOME/opt/lua@5.1 install
+mkdir -p ~/.local/bin
+ln -s ~/opt/lua@5.1/bin/lua ~/.local/bin/lua5.1
+cd ..
+
 # Install rust
 curl https://sh.rustup.rs -sSf | sh
 
